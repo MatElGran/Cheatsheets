@@ -5,6 +5,15 @@
 - `<c-o>`: previous location
 - `<c-i>`: next location
 
+When line wraps, you can use these motion to navigate screen lines
+
+- `gk` [count] display lines upward, including line wraps
+- `gj` [count] display lines downward , including line wraps
+- `g0` go to the first character of the screen line (when no wraps To the leftmost character of the current line **that is on the screen**)
+- `g^` go to the first non-blank character of the screen line (when no wraps To the leftmost non-blank character of the current line **that is on the screen**)
+- `g$` To the last character of the screen line and [count - 1] screen lines downward inclusive (when no wraps To the rightmost character of the current line **that is on the screen**.  Vertical movements keep the column, instead of going to the end of the line.)
+
+
 
 ## scrollbind
 
@@ -91,3 +100,17 @@ Hitting `<CR>` exits search mode
 
 - `/` followed by the up arrow allowing refinements to the search.
 - `<C-g>`, `<C-t>` jump to the next occurrence of the current pattern while focus is still in the search box.
+
+## substitute
+
+### separator
+
+To avoid confusion with the slashes, another character can be used in the substitute command.
+
+```vimscript
+:s#target#replacement#
+```
+
+### new line in substitute
+
+C-v C-m => should read ^M on command line
