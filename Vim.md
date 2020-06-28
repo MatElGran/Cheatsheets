@@ -9,11 +9,17 @@ When line wraps, you can use these motion to navigate screen lines
 
 - `gk` [count] display lines upward, including line wraps
 - `gj` [count] display lines downward , including line wraps
-- `g0` go to the first character of the screen line (when no wraps To the leftmost character of the current line **that is on the screen**)
-- `g^` go to the first non-blank character of the screen line (when no wraps To the leftmost non-blank character of the current line **that is on the screen**)
-- `g$` To the last character of the screen line and [count - 1] screen lines downward inclusive (when no wraps To the rightmost character of the current line **that is on the screen**.  Vertical movements keep the column, instead of going to the end of the line.)
-
-
+- `g0` go to the first character of the screen line 
+(when no wraps To the leftmost character of the current 
+line **that is on the screen**)
+- `g^` go to the first non-blank character of the screen 
+line (when no wraps To the leftmost non-blank character 
+of the current line **that is on the screen**)
+- `g$` To the last character of the screen line and 
+[count - 1] screen lines downward inclusive (when no 
+wraps To the rightmost character of the current line 
+**that is on the screen**.  Vertical movements keep 
+the column, instead of going to the end of the line.)
 
 ## scrollbind
 
@@ -40,8 +46,9 @@ The range is always placed before the command
 
 ### Separator
 
-When separator is `;` the cursor position will be set to that line
-before interpreting the next line specifier.  This doesn't happen for `,`.
+When separator is `;` the cursor position will be 
+set to that line before interpreting the next line 
+specifier.  This doesn't happen for `,`.
 
 
 ### Aliases
@@ -131,4 +138,9 @@ Insert the file test.txt before the first line in your current buffer
 - `:r!sed -n 2,8p test.txt`
 Insert lines 2 to 8 from a file test.txt below the cursor
 - `:r !ls`
-Insert a directory listing below the cursor 
+Insert a directory listing below the cursor
+
+## Command history
+
+`<c-f>` in command mode will open a new split containing
+your command history
