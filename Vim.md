@@ -87,9 +87,7 @@ The '< and '> are marks, placed at the start and end of the Visual selection and
 
 Hitting `<CR>` exits search mode
 
-refining the 
+### refining the search
 
 - `/` followed by the up arrow allowing refinements to the search.
-
-`<C-g>`, `<C-t>`
-- jump to the next occurrence of the current pattern while focus is still in the search box.
+- `<C-g>`, `<C-t>` jump to the next occurrence of the current pattern while focus is still in the search box.
