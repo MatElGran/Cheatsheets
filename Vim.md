@@ -42,7 +42,7 @@ before interpreting the next line specifier.  This doesn't happen for `,`.
 - `.` is the current line (default except for a few commands like :write and :global which have the whole file as default range
 - `%` is the whole file (short for 1,$)
 
-## adresses format
+### adresses format
 
 - a number (inclusive)
 - a pattern
@@ -81,3 +81,15 @@ If you select text with Visual mode and  you then press ":" to start a colon com
 
 The '< and '> are marks, placed at the start and end of the Visual selection and they remain at their position until another Visual selection is made
 
+## search
+
+`/some_pattern<CR>`
+
+Hitting `<CR>` exits search mode
+
+refining the 
+
+- `/` followed by the up arrow allowing refinements to the search.
+
+`<C-g>`, `<C-t>`
+- jump to the next occurrence of the current pattern while focus is still in the search box.
