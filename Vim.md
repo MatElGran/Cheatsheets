@@ -98,14 +98,17 @@ Hitting `<CR>` exits search mode
 
 ### refining the search
 
-- `/` followed by the up arrow allowing refinements to the search.
-- `<C-g>`, `<C-t>` jump to the next occurrence of the current pattern while focus is still in the search box.
+- `/` followed by the up arrow allowing refinements 
+to the search.
+- `<C-g>`, `<C-t>` jump to the next occurrence of 
+the current pattern while focus is still in the search box.
 
 ## substitute
 
 ### separator
 
-To avoid confusion with the slashes, another character can be used in the substitute command.
+To avoid confusion with the slashes, another character can
+be used in the substitute command.
 
 ```vimscript
 :s#target#replacement#
@@ -114,3 +117,18 @@ To avoid confusion with the slashes, another character can be used in the substi
 ### new line in substitute
 
 C-v C-m => should read ^M on command line
+
+## read
+
+Vim has a :[r]ead command. Useful to insert a file, 
+or the output from a system command, into the current
+buffer.
+
+- `:r test.txt`
+Insert the file test.txt below the cursor in your current buffer
+- `:0r test.txt`
+Insert the file test.txt before the first line in your current buffer
+- `:r!sed -n 2,8p test.txt`
+Insert lines 2 to 8 from a file test.txt below the cursor
+- `:r !ls`
+Insert a directory listing below the cursor 
